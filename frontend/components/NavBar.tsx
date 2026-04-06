@@ -43,16 +43,7 @@ export function NavBar() {
           </nav>
         </div>
         <div className="flex items-center gap-4">
-          {user.isSignedIn ? (
-            <UserButton />
-          ) : (
-            <Button
-              variant="outline"
-              className="text-white/70 hover:text-primary"
-            >
-              <SignInButton mode="modal" />
-            </Button>
-          )}
+          {user.isSignedIn ? <UserButton /> : <SignInButton mode="modal" />}
           <Link href="/triage">
             <Button className="bg-primary text-black hover:bg-primary/90">
               Get Help Now
